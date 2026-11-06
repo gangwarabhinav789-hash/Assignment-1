@@ -11,8 +11,8 @@
 
     <main>
         <h2>Registration Form</h2>
-        <!-- Task 4.1: Form with Name, Email, Password, and Labels -->
         <form action="#">
+            <!-- Task 4.1 Fields -->
             <div>
                 <label for="username">Full Name:</label>
                 <input type="text" id="username" name="username" required>
@@ -26,6 +26,52 @@
             <div>
                 <label for="userpassword">Password:</label>
                 <input type="password" id="userpassword" name="userpassword" required>
+            </div>
+            <br>
+
+            <!-- Task 4.2: Extended Form Inputs -->
+            <div>
+                <label for="birthdate">Date of Birth:</label>
+                <input type="date" id="birthdate" name="birthdate">
+            </div>
+            <br>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <br>
+            <div>
+                <label>Year of Study:</label>
+                <input type="radio" id="year1" name="year" value="1st">
+                <label for="year1">1st Year</label>
+                <input type="radio" id="year2" name="year" value="2nd">
+                <label for="year2">2nd Year</label>
+            </div>
+            <br>
+            <div>
+                <label>Interests:</label>
+                <input type="checkbox" id="interest_coding" name="interests" value="coding">
+                <label for="interest_coding">Coding</label>
+                <input type="checkbox" id="interest_design" name="interests" value="design">
+                <label for="interest_design">UI/UX Design</label>
+            </div>
+            <br>
+            <div>
+                <label for="club_role">Preferred Role:</label>
+                <select id="club_role" name="club_role">
+                    <option value="member">General Member</option>
+                    <option value="developer">Core Developer</option>
+                    <option value="lead">Team Lead</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="comments">Why do you want to join? (Message Box):</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+            </div>
+            <br>
+            <div>
+                <button type="submit">Submit Registration</button>
             </div>
         </form>
     </main>
