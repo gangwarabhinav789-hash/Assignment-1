@@ -19,7 +19,6 @@
       gap: 20px;
     }
     
-    /* TASK 6.2: Card style with border and rounded corners */
     .profile-card {
       background: white;
       width: 320px;
@@ -29,7 +28,6 @@
       text-align: center;
     }
 
-    /* TASK 6.2: Circle Avatar style */
     .avatar {
       width: 80px;
       height: 80px;
@@ -38,10 +36,20 @@
       margin-bottom: 10px;
     }
 
-    /* TASK 6.2: Two extra color variations + Default */
     .card-theme-blue { border-color: #007bff; background-color: #e7f1ff; }
     .card-theme-green { border-color: #28a745; background-color: #e8f5e9; }
     .card-theme-dark { border-color: #343a40; background-color: #f8f9fa; }
+
+    /* TASK 6.3: Give the bio box a fixed height and overflow: auto so it scrolls */
+    .bio-box {
+      height: 80px;
+      overflow: auto;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 8px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
@@ -50,21 +58,22 @@
   <div class="profile-card card-theme-blue">
     <img src="https://picsum.photos" class="avatar" alt="Avatar">
     <h3>User One</h3>
-    <div class="bio-box">Bio content placeholder.</div>
+    <!-- Long paragraph added to visibly trigger the scrolling function -->
+    <div class="bio-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This text is intentionally extended to verify that the fixed height element restricts content clean-up boundaries while creating a vertical scrollbar automatically.</div>
   </div>
 
   <!-- Version 2: Green Theme -->
   <div class="profile-card card-theme-green">
     <img src="https://picsum.photos" class="avatar" alt="Avatar">
     <h3>User Two</h3>
-    <div class="bio-box">Bio content placeholder.</div>
+    <div class="bio-box">Short bio. It will not scroll because it fits inside the boundaries easily.</div>
   </div>
 
   <!-- Version 3: Dark Theme -->
   <div class="profile-card card-theme-dark">
     <img src="https://picsum.photos" class="avatar" alt="Avatar">
     <h3>User Three</h3>
-    <div class="bio-box">Bio content placeholder.</div>
+    <div class="bio-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This text is intentionally extended to verify that the fixed height element restricts content clean-up boundaries while creating a vertical scrollbar automatically.</div>
   </div>
 
 </body>
