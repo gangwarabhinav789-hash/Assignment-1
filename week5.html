@@ -16,7 +16,7 @@
     <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
-        /* Task 5.4: Define colors and spacing in :root variables */
+        /* Task 5.4: Colors and spacing variables */
         :root {
             --bg-color-main: #f0f2f5;
             --bg-color-card: #ffffff;
@@ -32,6 +32,13 @@
             --border-radius-base: 8px;
         }
 
+        /* 
+           Task 5.5: Color Selection Rationale
+           1. I chose a slate dark gray (#1e293b) for the main headers to give the portal a professional and modern look.
+           2. The soft light gray background (#f0f2f5) reduces overall screen glare and provides clean structural card grouping.
+           3. Bright cyan (#38bdf8) was selected as an accent color to ensure links are eye-catching and highly visible.
+        */
+
         /* Task 5.2: Universal Selector */
         * {
             box-sizing: border-box;
@@ -39,7 +46,7 @@
             padding: 0;
         }
 
-        /* Task 5.3 & 5.4: Utilizing Variables for Body styles */
+        /* Task 5.3 & 5.4: Global Body styling */
         body {
             font-family: 'Poppins', sans-serif;
             font-size: 16px;
@@ -49,7 +56,7 @@
             padding-bottom: 40px;
         }
 
-        /* Task 5.2 & 5.4: Element Selector with Variables */
+        /* Task 5.2 & 5.4: Element Selector */
         h1 {
             color: var(--text-color-light);
             margin-bottom: var(--spacing-small);
@@ -63,14 +70,14 @@
             margin-bottom: 15px;
         }
 
-        /* Task 5.2 & 5.4: Id Selector with Variables */
+        /* Task 5.2 & 5.4: Id Selector */
         #hero {
             background-color: var(--bg-color-hero);
             padding: var(--spacing-large);
             text-align: center;
         }
 
-        /* Task 5.2 & 5.4: Class Selector with Variables */
+        /* Task 5.2 & 5.4: Class Selector */
         .card {
             background-color: var(--bg-color-card);
             border-radius: var(--border-radius-base);
