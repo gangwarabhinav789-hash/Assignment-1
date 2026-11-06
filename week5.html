@@ -9,16 +9,60 @@
     <link rel="icon" type="image/x-icon" href="https://picsum.photos">
     <title>Tech Club Page - Week 5</title>
 
-    <!-- Task 5.1: Internal style tag containing initial CSS rules -->
+    <!-- Task 5.1: Internal Style Container -->
     <style>
+        /* Task 5.2: 1. Universal Selector (*) */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Task 5.2: 2. Element Selector (h1) */
+        h1 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        /* Task 5.2: 3. Id Selector (#hero) */
+        #hero {
+            background-color: #1e293b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Task 5.2: 4. Class Selector (.card) */
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
         body {
             background-color: #f0f2f5;
+            padding-bottom: 40px;
+        }
+        nav ul {
+            list-style: none;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <!-- Giving the header an id tag for future selectors -->
+    <!-- Task 5.2: ID applied to header container element -->
     <header id="hero">
+        <!-- Task 5.2: Element selector target -->
         <h1>Tech Club Portal</h1>
         <nav>
             <ul>
@@ -31,10 +75,11 @@
     </header>
 
     <main>
-        <!-- Adding class container to layout sections -->
+        <!-- Task 5.2: Class selector target -->
         <section class="card">
             <h2>Upcoming Club Events</h2>
-            <table border="1" cellpadding="8">
+            <br>
+            <table border="1" cellpadding="8" style="width: 100%; border-collapse: collapse;">
                 <thead>
                     <tr>
                         <th>Event Date</th>
@@ -62,8 +107,10 @@
             </table>
         </section>
 
+        <!-- Task 5.2: Class selector target -->
         <section class="card">
             <h2>Registration Form</h2>
+            <br>
             <form action="#">
                 <div>
                     <label for="username">Full Name:</label>
@@ -117,11 +164,11 @@
                 <br>
                 <div>
                     <label for="comments">Why do you want to join? (Message Box):</label><br>
-                    <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+                    <textarea id="comments" name="comments" rows="4" style="width: 100%;"></textarea>
                 </div>
                 <br>
                 <div>
-                    <button type="submit">Submit Registration</button>
+                    <button type="submit" style="padding: 8px 16px; background-color: #1e293b; color: white; border: none; border-radius: 4px; cursor: pointer;">Submit Registration</button>
                 </div>
             </form>
         </section>
