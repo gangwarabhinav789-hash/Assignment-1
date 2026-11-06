@@ -12,13 +12,44 @@
     body {
       font-family: sans-serif;
       background-color: #f0f2f5;
-      padding: 40px;
+      padding-bottom: 60px; /* Space at bottom so fixed button doesn't hide content */
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 20px;
     }
     
+    /* TASK 6.4: Make the top bar sticky and use z-index */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+      z-index: 10; /* Keeps bar layout on top of scrolling content */
+    }
+
+    /* TASK 6.4: Make the + button fixed and use z-index */
+    .fixed-add-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #007bff;
+      color: white;
+      border: none;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 20; /* Keeps floating action button above everything else */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
     .profile-card {
       background: white;
       width: 320px;
@@ -40,7 +71,6 @@
     .card-theme-green { border-color: #28a745; background-color: #e8f5e9; }
     .card-theme-dark { border-color: #343a40; background-color: #f8f9fa; }
 
-    /* TASK 6.3: Give the bio box a fixed height and overflow: auto so it scrolls */
     .bio-box {
       height: 80px;
       overflow: auto;
@@ -54,11 +84,13 @@
 </head>
 <body>
 
+  <!-- Sticky Top Bar Element -->
+  <div class="top-bar">Dashboard Navigation Header</div>
+
   <!-- Version 1: Blue Theme -->
   <div class="profile-card card-theme-blue">
     <img src="https://picsum.photos" class="avatar" alt="Avatar">
     <h3>User One</h3>
-    <!-- Long paragraph added to visibly trigger the scrolling function -->
     <div class="bio-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This text is intentionally extended to verify that the fixed height element restricts content clean-up boundaries while creating a vertical scrollbar automatically.</div>
   </div>
 
@@ -75,6 +107,9 @@
     <h3>User Three</h3>
     <div class="bio-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This text is intentionally extended to verify that the fixed height element restricts content clean-up boundaries while creating a vertical scrollbar automatically.</div>
   </div>
+
+  <!-- Fixed Action Plus Button -->
+  <button class="fixed-add-btn">+</button>
 
 </body>
 </html>
