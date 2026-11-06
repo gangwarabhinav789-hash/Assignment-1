@@ -10,12 +10,28 @@
     <link rel="icon" type="image/x-icon" href="https://picsum.photos">
     <title>Tech Club Page - Week 5</title>
 
-    <!-- Task 5.3: Import Google Font (Poppins) -->
+    <!-- Task 5.3: Import Google Font -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
+        /* Task 5.4: Define colors and spacing in :root variables */
+        :root {
+            --bg-color-main: #f0f2f5;
+            --bg-color-card: #ffffff;
+            --bg-color-hero: #1e293b;
+            --text-color-dark: #334155;
+            --text-color-light: #ffffff;
+            --accent-color: #38bdf8;
+            --box-shadow-smooth: 0 4px 6px rgba(0, 0, 0, 0.05);
+            
+            --spacing-small: 10px;
+            --spacing-medium: 20px;
+            --spacing-large: 25px;
+            --border-radius-base: 8px;
+        }
+
         /* Task 5.2: Universal Selector */
         * {
             box-sizing: border-box;
@@ -23,45 +39,45 @@
             padding: 0;
         }
 
-        /* Task 5.3: Set global base Font, Colors, Font-size, and Line-height */
+        /* Task 5.3 & 5.4: Utilizing Variables for Body styles */
         body {
             font-family: 'Poppins', sans-serif;
             font-size: 16px;
             line-height: 1.6;
-            color: #334155;
-            background-color: #f0f2f5;
+            color: var(--text-color-dark);
+            background-color: var(--bg-color-main);
             padding-bottom: 40px;
         }
 
-        /* Task 5.2: Element Selector */
+        /* Task 5.2 & 5.4: Element Selector with Variables */
         h1 {
-            color: #ffffff;
-            margin-bottom: 10px;
+            color: var(--text-color-light);
+            margin-bottom: var(--spacing-small);
             font-size: 2rem;
             font-weight: 600;
         }
 
         h2 {
             font-size: 1.5rem;
-            color: #1e293b;
+            color: var(--bg-color-hero);
             margin-bottom: 15px;
         }
 
-        /* Task 5.2: Id Selector */
+        /* Task 5.2 & 5.4: Id Selector with Variables */
         #hero {
-            background-color: #1e293b;
-            padding: 25px;
+            background-color: var(--bg-color-hero);
+            padding: var(--spacing-large);
             text-align: center;
         }
 
-        /* Task 5.2: Class Selector */
+        /* Task 5.2 & 5.4: Class Selector with Variables */
         .card {
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 20px auto;
+            background-color: var(--bg-color-card);
+            border-radius: var(--border-radius-base);
+            padding: var(--spacing-large);
+            margin: var(--spacing-medium) auto;
             max-width: 600px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--box-shadow-smooth);
         }
 
         nav ul {
@@ -72,7 +88,7 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: #38bdf8;
+            color: var(--accent-color);
             text-decoration: none;
             font-weight: 600;
         }
@@ -186,7 +202,7 @@
                 </div>
                 <br>
                 <div>
-                    <button type="submit" style="font-family: inherit; padding: 8px 16px; background-color: #1e293b; color: white; border: none; border-radius: 4px; cursor: pointer;">Submit Registration</button>
+                    <button type="submit" style="font-family: inherit; padding: 8px 16px; background-color: var(--bg-color-hero); color: var(--text-color-light); border: none; border-radius: 4px; cursor: pointer;">Submit Registration</button>
                 </div>
             </form>
         </section>
