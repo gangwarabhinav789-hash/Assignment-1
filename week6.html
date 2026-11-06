@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Week 6 Assignment</title>
   <style>
-    /* TASK 6.1: Global Reset & Box Model Setup */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -13,21 +12,60 @@
     body {
       font-family: sans-serif;
       background-color: #f0f2f5;
-      padding: 20px;
+      padding: 40px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
+    
+    /* TASK 6.2: Card style with border and rounded corners */
     .profile-card {
       background: white;
       width: 320px;
       padding: 20px;
-      margin: 20px;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      text-align: center;
     }
+
+    /* TASK 6.2: Circle Avatar style */
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    /* TASK 6.2: Two extra color variations + Default */
+    .card-theme-blue { border-color: #007bff; background-color: #e7f1ff; }
+    .card-theme-green { border-color: #28a745; background-color: #e8f5e9; }
+    .card-theme-dark { border-color: #343a40; background-color: #f8f9fa; }
   </style>
 </head>
 <body>
-  <div class="profile-card">
-    <p>Box model layout initialization.</p>
+
+  <!-- Version 1: Blue Theme -->
+  <div class="profile-card card-theme-blue">
+    <img src="https://picsum.photos" class="avatar" alt="Avatar">
+    <h3>User One</h3>
+    <div class="bio-box">Bio content placeholder.</div>
   </div>
+
+  <!-- Version 2: Green Theme -->
+  <div class="profile-card card-theme-green">
+    <img src="https://picsum.photos" class="avatar" alt="Avatar">
+    <h3>User Two</h3>
+    <div class="bio-box">Bio content placeholder.</div>
+  </div>
+
+  <!-- Version 3: Dark Theme -->
+  <div class="profile-card card-theme-dark">
+    <img src="https://picsum.photos" class="avatar" alt="Avatar">
+    <h3>User Three</h3>
+    <div class="bio-box">Bio content placeholder.</div>
+  </div>
+
 </body>
 </html>
