@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Week 6 Assignment</title>
   <style>
+    /* TASK 6.5: Clean, uniform, semantic styling architectural system */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -12,15 +13,14 @@
     body {
       font-family: sans-serif;
       background-color: #f0f2f5;
-      padding-bottom: 60px; /* Space at bottom so fixed button doesn't hide content */
+      padding-bottom: 60px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 20px;
     }
     
-    /* TASK 6.4: Make the top bar sticky and use z-index */
-    .top-bar {
+    .header-bar {
       position: sticky;
       top: 0;
       width: 100%;
@@ -29,11 +29,42 @@
       text-align: center;
       font-weight: bold;
       border-bottom: 1px solid #ddd;
-      z-index: 10; /* Keeps bar layout on top of scrolling content */
+      z-index: 10;
     }
 
-    /* TASK 6.4: Make the + button fixed and use z-index */
-    .fixed-add-btn {
+    .user-card {
+      background: white;
+      width: 320px;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .user-card__avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .user-card__bio {
+      height: 80px;
+      overflow: auto;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 8px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    /* Clean variation architecture modifier tags */
+    .user-card--blue { border-color: #007bff; background-color: #e7f1ff; }
+    .user-card--green { border-color: #28a745; background-color: #e8f5e9; }
+    .user-card--dark { border-color: #343a40; background-color: #f8f9fa; }
+
+    .action-button-fixed {
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -46,70 +77,37 @@
       font-size: 24px;
       font-weight: bold;
       cursor: pointer;
-      z-index: 20; /* Keeps floating action button above everything else */
+      z-index: 20;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    .profile-card {
-      background: white;
-      width: 320px;
-      padding: 20px;
-      border: 2px solid #ccc;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-
-    .card-theme-blue { border-color: #007bff; background-color: #e7f1ff; }
-    .card-theme-green { border-color: #28a745; background-color: #e8f5e9; }
-    .card-theme-dark { border-color: #343a40; background-color: #f8f9fa; }
-
-    .bio-box {
-      height: 80px;
-      overflow: auto;
-      background: rgba(255, 255, 255, 0.7);
-      padding: 8px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      text-align: left;
     }
   </style>
 </head>
 <body>
 
-  <!-- Sticky Top Bar Element -->
-  <div class="top-bar">Dashboard Navigation Header</div>
+  <div class="header-bar">Dashboard Navigation Header</div>
 
   <!-- Version 1: Blue Theme -->
-  <div class="profile-card card-theme-blue">
-    <img src="https://picsum.photos" class="avatar" alt="Avatar">
+  <div class="user-card user-card--blue">
+    <img src="https://picsum.photos" class="user-card__avatar" alt="Avatar">
     <h3>User One</h3>
-    <div class="bio-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This text is intentionally extended to verify that the fixed height element restricts content clean-up boundaries while creating a vertical scrollbar automatically.</div>
+    <div class="user-card__bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This text is intentionally extended to verify that the fixed height element restricts content clean-up boundaries while creating a vertical scrollbar automatically.</div>
   </div>
 
   <!-- Version 2: Green Theme -->
-  <div class="profile-card card-theme-green">
-    <img src="https://picsum.photos" class="avatar" alt="Avatar">
+  <div class="user-card user-card--green">
+    <img src="https://picsum.photos" class="user-card__avatar" alt="Avatar">
     <h3>User Two</h3>
-    <div class="bio-box">Short bio. It will not scroll because it fits inside the boundaries easily.</div>
+    <div class="user-card__bio">Short bio. It will not scroll because it fits inside the boundaries easily.</div>
   </div>
 
   <!-- Version 3: Dark Theme -->
-  <div class="profile-card card-theme-dark">
-    <img src="https://picsum.photos" class="avatar" alt="Avatar">
+  <div class="user-card user-card--dark">
+    <img src="https://picsum.photos" class="user-card__avatar" alt="Avatar">
     <h3>User Three</h3>
-    <div class="bio-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This text is intentionally extended to verify that the fixed height element restricts content clean-up boundaries while creating a vertical scrollbar automatically.</div>
+    <div class="user-card__bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This text is intentionally extended to verify that the fixed height element restricts content clean-up boundaries while creating a vertical scrollbar automatically.</div>
   </div>
 
-  <!-- Fixed Action Plus Button -->
-  <button class="fixed-add-btn">+</button>
+  <button class="action-button-fixed">+</button>
 
 </body>
 </html>
