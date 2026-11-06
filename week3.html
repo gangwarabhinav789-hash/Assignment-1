@@ -7,33 +7,52 @@
 </head>
 <body>
 
-    <!-- Task 3.1: Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="week3.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="https://github.com" target="_blank">Open GitHub in New Tab</a></li>
-        </ul>
-    </nav>
-
-    <!-- Task 3.2: Image Element -->
-    <img src="https://picsum.photos" alt="A professional placeholder profile portrait for my portfolio website">
-
-    <!-- Task 3.3: Make a list of your course. Put one list inside another list. -->
-    <h3>My Courses</h3>
-    <ul>
-        <li>Computer Science & Engineering
+    <!-- Task 3.4: Header & Nav Semantic Layout Tags -->
+    <header>
+        <h1>My Web Portfolio</h1>
+        <nav>
             <ul>
-                <li>Web Development (HTML5, CSS3)</li>
-                <li>Data Structures & Algorithms</li>
+                <li><a href="week3.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="https://github.com" target="_blank">Open GitHub in New Tab</a></li>
             </ul>
-        </li>
-        <li>Mathematics
+        </nav>
+    </header>
+
+    <!-- Task 3.4: Main & Section Semantic Layout Tags -->
+    <main>
+        <section>
+            <!-- Task 3.2: Image Content -->
+            <img src="https://picsum.photos" alt="A professional placeholder profile portrait for my portfolio website">
+
+            <!-- Task 3.3: Nested Course List Content -->
+            <h3>My Courses</h3>
             <ul>
-                <li>Discrete Mathematics</li>
+                <li>Computer Science & Engineering
+                    <ul>
+                        <li>Web Development (HTML5, CSS3)</li>
+                        <li>Data Structures & Algorithms</li>
+                    </ul>
+                </li>
+                <li>Mathematics
+                    <ul>
+                        <li>Discrete Mathematics</li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-    </ul>
+        </section>
+
+        <!-- Task 3.4: Aside Layout Sidebar Tag -->
+        <aside>
+            <h3>Quick Notice</h3>
+            <p>Welcome to my student work area. Check back weekly for updates.</p>
+        </aside>
+    </main>
+
+    <!-- Task 3.4: Footer Semantic Layout Tag -->
+    <footer>
+        <p>&copy; 2026 Student Portfolio Layout</p>
+    </footer>
 
 </body>
 </html>
