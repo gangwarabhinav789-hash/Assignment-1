@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Task 4.4: Meta Tags and Favicon Integration -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Official registration portal and event tracker for the Tech Club.">
     <meta name="keywords" content="Tech Club, Web Development, Programming, Registration, Events">
     <meta name="author" content="Student Member">
-    
-    <!-- Link to favicon path layout placeholder -->
     <link rel="icon" type="image/x-icon" href="https://picsum.photos">
-    
-    <title>Tech Club Page</title>
+    <title>Tech Club Page - Register</title>
 </head>
 <body>
     <header>
         <h1>Tech Club Portal</h1>
+        <!-- Task 4.5: Shared Navigation Menu linking all 4 pages -->
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="week4.html">Register</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <!-- Task 4.3: Events Table -->
         <h2>Upcoming Club Events</h2>
         <table border="1" cellpadding="8">
             <thead>
@@ -50,7 +54,6 @@
 
         <h2>Registration Form</h2>
         <form action="#">
-            <!-- Task 4.1 Fields -->
             <div>
                 <label for="username">Full Name:</label>
                 <input type="text" id="username" name="username" required>
@@ -66,8 +69,6 @@
                 <input type="password" id="userpassword" name="userpassword" required>
             </div>
             <br>
-
-            <!-- Task 4.2 Fields -->
             <div>
                 <label for="birthdate">Date of Birth:</label>
                 <input type="date" id="birthdate" name="birthdate">
