@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official registration portal and event tracker for the Tech Club.">
+    <meta name="keywords" content="Tech Club, Web Development, Programming, Registration, Events">
+    <meta name="author" content="Student Member">
+    <link rel="icon" type="image/x-icon" href="https://picsum.photos">
+    <title>Tech Club Page - Week 5</title>
+
+    <!-- Task 5.1: Internal style tag containing initial CSS rules -->
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Giving the header an id tag for future selectors -->
+    <header id="hero">
+        <h1>Tech Club Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="week5.html?page=home">Home</a></li>
+                <li><a href="week5.html?page=about">About</a></li>
+                <li><a href="week5.html">Register</a></li>
+                <li><a href="week5.html?page=contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Adding class container to layout sections -->
+        <section class="card">
+            <h2>Upcoming Club Events</h2>
+            <table border="1" cellpadding="8">
+                <thead>
+                    <tr>
+                        <th>Event Date</th>
+                        <th>Event Title</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nov 15, 2026</td>
+                        <td>Web Dev Hackathon</td>
+                        <td>Lab 3</td>
+                    </tr>
+                    <tr>
+                        <td>Dec 05, 2026</td>
+                        <td>UI/UX Design Seminar</td>
+                        <td>Seminar Hall A</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total Scheduled Events: 2</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Registration Form</h2>
+            <form action="#">
+                <div>
+                    <label for="username">Full Name:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <br>
+                <div>
+                    <label for="useremail">Email Address:</label>
+                    <input type="email" id="useremail" name="useremail" required>
+                </div>
+                <br>
+                <div>
+                    <label for="userpassword">Password:</label>
+                    <input type="password" id="userpassword" name="userpassword" required>
+                </div>
+                <br>
+                <div>
+                    <label for="birthdate">Date of Birth:</label>
+                    <input type="date" id="birthdate" name="birthdate">
+                </div>
+                <br>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <br>
+                <div>
+                    <label>Year of Study:</label>
+                    <input type="radio" id="year1" name="year" value="1st">
+                    <label for="year1">1st Year</label>
+                    <input type="radio" id="year2" name="year" value="2nd">
+                    <label for="year2">2nd Year</label>
+                </div>
+                <br>
+                <div>
+                    <label>Interests:</label>
+                    <input type="checkbox" id="interest_coding" name="interests" value="coding">
+                    <label for="interest_coding">Coding</label>
+                    <input type="checkbox" id="interest_design" name="interests" value="design">
+                    <label for="interest_design">UI/UX Design</label>
+                </div>
+                <br>
+                <div>
+                    <label for="club_role">Preferred Role:</label>
+                    <select id="club_role" name="club_role">
+                        <option value="member">General Member</option>
+                        <option value="developer">Core Developer</option>
+                        <option value="lead">Team Lead</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="comments">Why do you want to join? (Message Box):</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+                </div>
+                <br>
+                <div>
+                    <button type="submit">Submit Registration</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
