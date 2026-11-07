@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 9 - Mobile-First Layout</title>
     <style>
-        /* Base Reset */
+        /* Base Reset & Root Font Sizing */
+        html {
+            font-size: 16px; /* Base root size: 1rem = 16px */
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -19,6 +23,12 @@
             background-color: #f9f9f9;
         }
 
+        h2 {
+            font-size: 1.5rem; /* Task 9.2: Use rem for font sizes */
+            margin-bottom: 1.25rem;
+            color: #333;
+        }
+
         .container {
             display: block; /* Stacks vertically on mobile */
         }
@@ -26,9 +36,29 @@
         .section-box {
             background-color: #ffffff;
             border: 1px solid #ccc;
-            padding: 20px;
-            margin-bottom: 15px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
             text-align: center;
+        }
+
+        .section-box h3 {
+            font-size: 1.2rem; /* Task 9.2: Use rem for heading text */
+            margin-bottom: 0.5rem;
+        }
+
+        .section-box p {
+            font-size: 1rem; /* Task 9.2: Use rem for body text */
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        /* Task 9.2: Fluid Image Constraints */
+        .responsive-img {
+            max-width: 100%; /* Ensures image fits within its parent container width */
+            height: auto;    /* Maintains original image aspect ratio */
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
         }
 
         /* ========================================================
@@ -37,12 +67,16 @@
 
         /* [TABLET BREAKPOINT] */
         @media (min-width: 768px) {
-            /* Tablet styles will go here in future tasks */
+            html {
+                font-size: 17px; /* Slightly scales up layout text across larger viewports */
+            }
         }
 
         /* [DESKTOP BREAKPOINT] */
         @media (min-width: 1024px) {
-            /* Desktop styles will go here in future tasks */
+            html {
+                font-size: 18px; /* Scales layout text up across desktop screens */
+            }
         }
     </style>
 </head>
@@ -50,10 +84,19 @@
 
     <h2>Week 9: Mobile-First Approach</h2>
 
-    <!-- CONTAINER (Task 9.1) -->
+    <!-- CONTAINER (Task 9.1 & 9.2 Assembly) -->
     <div class="container">
-        <div class="section-box">Mobile First Section A</div>
-        <div class="section-box">Mobile First Section B</div>
+        <div class="section-box">
+            <h3>Responsive Content A</h3>
+            <p>This layout text transitions scale ratios dynamically using relative rem units.</p>
+            <!-- Task 9.2 placeholder visual asset -->
+            <img src="https://picsum.photos" alt="Sample Display Asset" class="responsive-img">
+        </div>
+        
+        <div class="section-box">
+            <h3>Responsive Content B</h3>
+            <p>The companion elements stack naturally inline with default viewport adjustments.</p>
+        </div>
     </div>
 
 </body>
