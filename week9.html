@@ -96,7 +96,7 @@
         }
 
         /* ========================================================
-           MEDIA QUERIES (Task 9.3 Grid Expansion Layout Changes)
+           MEDIA QUERIES
            ======================================================== */
 
         /* [TABLET BREAKPOINT] */
@@ -104,22 +104,26 @@
             html {
                 font-size: 17px; 
             }
-            /* Navbar items shift to row layout */
             .navbar {
                 flex-direction: row;
                 justify-content: space-between;
                 padding: 1rem 2rem;
             }
-            /* Page Grid updates to 2 columns on Tablet */
             .container {
                 grid-template-columns: 1fr 1fr;
             }
         }
 
-        /* [DESKTOP BREAKPOINT] */
+        /* [NEW CODE FOR TASK 9.4: DESKTOP EXPANSION] */
         @media (min-width: 1024px) {
             html {
                 font-size: 18px; 
+            }
+            /* Expand grid to 3 columns on full desktop screen sizes */
+            .container {
+                grid-template-columns: 1fr 1fr 1fr;
+                max-width: 1200px;
+                margin: 0 auto;
             }
         }
     </style>
@@ -150,6 +154,12 @@
             <div class="section-box">
                 <h3>Responsive Content B</h3>
                 <p>The companion elements stack naturally inline with default viewport adjustments.</p>
+            </div>
+
+            <!-- Task 9.4: Adding a third section box to balance the desktop layout view -->
+            <div class="section-box">
+                <h3>Responsive Content C</h3>
+                <p>This section fills out the newly expanded space cleanly across wider monitor viewports.</p>
             </div>
         </div>
     </main>
