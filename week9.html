@@ -17,87 +17,142 @@
             font-family: Arial, sans-serif;
         }
 
-        /* 9.1: MOBILE LAYOUT FIRST (Default Styles) */
         body {
-            padding: 15px;
             background-color: #f9f9f9;
         }
 
+        /* Task 9.3: NAVBAR FLEXBOX (Default Mobile-First: Stacked/Centered) */
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 1rem;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2196F3;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        /* Main content padding adjustment */
+        main {
+            padding: 15px;
+        }
+
         h2 {
-            font-size: 1.5rem; /* Task 9.2: Use rem for font sizes */
+            font-size: 1.5rem; 
             margin-bottom: 1.25rem;
             color: #333;
         }
 
+        /* Task 9.3: PAGE SECTIONS GRID (Default Mobile-First: 1 Column Stacked) */
         .container {
-            display: block; /* Stacks vertically on mobile */
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
         }
 
         .section-box {
             background-color: #ffffff;
             border: 1px solid #ccc;
             padding: 1.25rem;
-            margin-bottom: 1rem;
             text-align: center;
+            border-radius: 4px;
         }
 
         .section-box h3 {
-            font-size: 1.2rem; /* Task 9.2: Use rem for heading text */
+            font-size: 1.2rem; 
             margin-bottom: 0.5rem;
         }
 
         .section-box p {
-            font-size: 1rem; /* Task 9.2: Use rem for body text */
+            font-size: 1rem; 
             margin-bottom: 1rem;
             color: #555;
         }
 
         /* Task 9.2: Fluid Image Constraints */
         .responsive-img {
-            max-width: 100%; /* Ensures image fits within its parent container width */
-            height: auto;    /* Maintains original image aspect ratio */
+            max-width: 100%; 
+            height: auto;    
             display: block;
             margin: 0 auto;
             border-radius: 4px;
         }
 
         /* ========================================================
-           MEDIA QUERIES
+           MEDIA QUERIES (Task 9.3 Grid Expansion Layout Changes)
            ======================================================== */
 
         /* [TABLET BREAKPOINT] */
         @media (min-width: 768px) {
             html {
-                font-size: 17px; /* Slightly scales up layout text across larger viewports */
+                font-size: 17px; 
+            }
+            /* Navbar items shift to row layout */
+            .navbar {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1rem 2rem;
+            }
+            /* Page Grid updates to 2 columns on Tablet */
+            .container {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
         /* [DESKTOP BREAKPOINT] */
         @media (min-width: 1024px) {
             html {
-                font-size: 18px; /* Scales layout text up across desktop screens */
+                font-size: 18px; 
             }
         }
     </style>
 </head>
 <body>
 
-    <h2>Week 9: Mobile-First Approach</h2>
+    <!-- Task 9.3 Flexbox Navbar Layout Module -->
+    <nav class="navbar">
+        <div class="logo">MobileFirst</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- CONTAINER (Task 9.1 & 9.2 Assembly) -->
-    <div class="container">
-        <div class="section-box">
-            <h3>Responsive Content A</h3>
-            <p>This layout text transitions scale ratios dynamically using relative rem units.</p>
-            <!-- Task 9.2 placeholder visual asset -->
-            <img src="https://picsum.photos" alt="Sample Display Asset" class="responsive-img">
+    <main>
+        <h2>Week 9: Mobile-First Approach</h2>
+
+        <!-- Task 9.3 Page Layout Grid Container Section -->
+        <div class="container">
+            <div class="section-box">
+                <h3>Responsive Content A</h3>
+                <p>This layout text transitions scale ratios dynamically using relative rem units.</p>
+                <img src="https://picsum.photos" alt="Sample Display Asset" class="responsive-img">
+            </div>
+            
+            <div class="section-box">
+                <h3>Responsive Content B</h3>
+                <p>The companion elements stack naturally inline with default viewport adjustments.</p>
+            </div>
         </div>
-        
-        <div class="section-box">
-            <h3>Responsive Content B</h3>
-            <p>The companion elements stack naturally inline with default viewport adjustments.</p>
-        </div>
-    </div>
+    </main>
 
 </body>
 </html>
