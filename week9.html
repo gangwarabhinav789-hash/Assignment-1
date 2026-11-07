@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 9 - Mobile-First Layout</title>
+    <title>Week 9 - Complete Mobile-First Assembly</title>
     <style>
         /* Base Reset & Root Font Sizing */
         html {
@@ -21,7 +21,7 @@
             background-color: #f9f9f9;
         }
 
-        /* Task 9.3: NAVBAR FLEXBOX (Default Mobile-First: Stacked/Centered) */
+        /* 9.3: NAVBAR FLEXBOX (Default Mobile-First: Stacked/Centered Layout) */
         .navbar {
             display: flex;
             flex-direction: column;
@@ -47,20 +47,25 @@
             color: #ffffff;
             text-decoration: none;
             font-size: 1rem;
+            transition: color 0.3s;
         }
 
-        /* Main content padding adjustment */
+        .nav-links a:hover {
+            color: #2196F3;
+        }
+
+        /* Main Content Wrapper padding */
         main {
             padding: 15px;
         }
 
         h2 {
-            font-size: 1.5rem; 
+            font-size: 1.5rem; /* 9.2: Use rem for heading text sizing */
             margin-bottom: 1.25rem;
             color: #333;
         }
 
-        /* Task 9.3: PAGE SECTIONS GRID (Default Mobile-First: 1 Column Stacked) */
+        /* 9.3: PAGE SECTIONS GRID (Default Mobile-First: 1 Column Stacked Layout) */
         .container {
             display: grid;
             grid-template-columns: 1fr;
@@ -73,53 +78,57 @@
             padding: 1.25rem;
             text-align: center;
             border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
         .section-box h3 {
-            font-size: 1.2rem; 
+            font-size: 1.2rem; /* 9.2: Use rem for sizing */
             margin-bottom: 0.5rem;
+            color: #222;
         }
 
         .section-box p {
-            font-size: 1rem; 
+            font-size: 1rem; /* 9.2: Use rem for sizing */
             margin-bottom: 1rem;
             color: #555;
         }
 
-        /* Task 9.2: Fluid Image Constraints */
+        /* 9.2: Fluid Responsive Image Constraints */
         .responsive-img {
-            max-width: 100%; 
-            height: auto;    
+            max-width: 100%; /* Prevents images from clipping container boundaries */
+            height: auto;    /* Retains relative aspect formatting proportion */
             display: block;
             margin: 0 auto;
             border-radius: 4px;
         }
 
         /* ========================================================
-           MEDIA QUERIES
+           MEDIA QUERIES (9.1, 9.3 & 9.4 Responsive Layout Updates)
            ======================================================== */
 
-        /* [TABLET BREAKPOINT] */
+        /* [9.1 & 9.3: TABLET VIEW BREAKPOINT] */
         @media (min-width: 768px) {
             html {
-                font-size: 17px; 
+                font-size: 17px; /* Gradually increases layout proportions */
             }
+            /* Navbar items shift into row alignment */
             .navbar {
                 flex-direction: row;
                 justify-content: space-between;
                 padding: 1rem 2rem;
             }
+            /* Grid container expands to a balanced 2-column layout */
             .container {
                 grid-template-columns: 1fr 1fr;
             }
         }
 
-        /* [NEW CODE FOR TASK 9.4: DESKTOP EXPANSION] */
+        /* [9.1 & 9.4: DESKTOP VIEW BREAKPOINT] */
         @media (min-width: 1024px) {
             html {
-                font-size: 18px; 
+                font-size: 18px; /* Scales base layouts up for big displays */
             }
-            /* Expand grid to 3 columns on full desktop screen sizes */
+            /* Page container expands smoothly into a 3-column system */
             .container {
                 grid-template-columns: 1fr 1fr 1fr;
                 max-width: 1200px;
@@ -130,7 +139,7 @@
 </head>
 <body>
 
-    <!-- Task 9.3 Flexbox Navbar Layout Module -->
+    <!-- Flexbox Navigation Panel (Task 9.3) -->
     <nav class="navbar">
         <div class="logo">MobileFirst</div>
         <ul class="nav-links">
@@ -140,23 +149,25 @@
         </ul>
     </nav>
 
+    <!-- Main Section Structure (Task 9.3 Grid Container) -->
     <main>
         <h2>Week 9: Mobile-First Approach</h2>
 
-        <!-- Task 9.3 Page Layout Grid Container Section -->
         <div class="container">
+            <!-- Box Content Item 1 -->
             <div class="section-box">
                 <h3>Responsive Content A</h3>
                 <p>This layout text transitions scale ratios dynamically using relative rem units.</p>
                 <img src="https://picsum.photos" alt="Sample Display Asset" class="responsive-img">
             </div>
             
+            <!-- Box Content Item 2 -->
             <div class="section-box">
                 <h3>Responsive Content B</h3>
                 <p>The companion elements stack naturally inline with default viewport adjustments.</p>
             </div>
 
-            <!-- Task 9.4: Adding a third section box to balance the desktop layout view -->
+            <!-- Box Content Item 3 (Added for Task 9.4 Desktop view completeness) -->
             <div class="section-box">
                 <h3>Responsive Content C</h3>
                 <p>This section fills out the newly expanded space cleanly across wider monitor viewports.</p>
