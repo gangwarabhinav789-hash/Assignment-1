@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 7 - Landing Page Assembly</title>
+    <title>Week 7 - Complete Responsive Landing Page</title>
     <style>
         /* Base Reset */
         * {
@@ -118,6 +118,29 @@
         .card p {
             color: #666;
             font-size: 14px;
+        }
+
+        /* NEW CODE FOR TASK 7.5: RESPONSIVE SCREEN ADJUSTMENTS */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+                padding: 20px;
+            }
+            .nav-right {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links {
+                gap: 15px;
+            }
+            .banner h1 {
+                font-size: 32px;
+            }
+            .banner p {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
